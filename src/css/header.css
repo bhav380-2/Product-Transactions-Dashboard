@@ -1,0 +1,269 @@
+.app {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #fdd5d55e;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+
+
+  .header-logo{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+  .header-logo span:nth-child(1){
+    font-size:0.95rem;
+    letter-spacing: 1.5px;
+  }
+
+  .header-logo span:nth-child(2){
+    font-size:1rem;
+    letter-spacing: 5px;
+  }
+
+  .header-logo span:nth-child(1):first-letter{
+    font-size:1.5rem;
+  }
+
+  .header-logo span:nth-child(2):first-letter{
+    font-size:1.8rem;
+  }
+
+  .header-actions{
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  
+
+
+
+  header select, header input {
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 480px) {
+
+    .app{
+        padding:0px;
+    }
+    header {
+      padding: 10px;
+    }
+
+
+
+  .header-logo span:nth-child(1){
+    font-size:0.82rem;
+    letter-spacing: 1.5px;
+  }
+
+  .header-logo span:nth-child(2){
+    font-size:0.93rem;
+    letter-spacing: 4.5px;
+  }
+
+  .header-logo span:nth-child(1):first-letter{
+    font-size:1.28rem;
+  }
+
+  .header-logo span:nth-child(2):first-letter{
+    font-size:1.66rem;
+  }
+
+  
+    header select, header input {
+      width:21vw;
+      margin-left: 7px;
+      font-size: 0.7rem;
+
+    }
+  
+    .pagination button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .stat-box {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 720px) {
+    header {
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .header-logo span:nth-child(1){
+      font-size:0.95rem;
+      letter-spacing: 1.5px;
+    }
+
+    .header-logo span:nth-child(2){
+      font-size:1rem;
+      letter-spacing: 5px;
+    }
+
+    .header-logo span:nth-child(1):first-letter{
+      font-size:1.5rem;
+    }
+
+    .header-logo span:nth-child(2):first-letter{
+      font-size:1.8rem;
+    }
+
+    .header-logo{
+      font-size:1rem;
+    }
+    .app{
+      padding:2px;
+  }
+  
+    header select, header input {
+      /* width: 100%; */
+      padding:5px;
+      font-size: 0.75rem;
+      width:21vw;
+      margin-left: 10px;
+      /* margin-bottom: 10px; */
+    }
+  
+    .stat-box {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (min-width: 721px) and (max-width: 992px) {
+    header {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .header-logo span:nth-child(1){
+      font-size:1rem;
+      letter-spacing: 2px;
+    }
+  
+    .header-logo span:nth-child(2){
+      font-size:1.1rem;
+      letter-spacing: 6.2px;
+    }
+  
+    .header-logo span:nth-child(1):first-letter{
+      font-size:1.5rem;
+    }
+  
+    .header-logo span:nth-child(2):first-letter{
+      font-size:2rem;
+    }
+
+    .app{
+      padding:5px;
+    }
+  
+    header select, header input {
+      margin-left: 10px;
+    }
+  
+    .pagination {
+      flex-direction: row;
+    }
+  
+    .stat-box {
+      width: 30%;
+    }
+  }
+  
+  @media (min-width: 993px) and (max-width: 1080px) {
+    header {
+      padding: 15px 30px;
+    }
+
+
+
+    .header-logo span:nth-child(1){
+      font-size:1.1rem;
+      letter-spacing: 2.8px;
+    }
+  
+    .header-logo span:nth-child(2){
+      font-size:1.2rem;
+      letter-spacing: 7.5px;
+    }
+  
+    .header-logo span:nth-child(1):first-letter{
+      font-size:1.57rem;
+    }
+  
+    .header-logo span:nth-child(2):first-letter{
+      font-size:2.25rem;
+    }
+
+  
+    header select, header input {
+      margin-left: 15px;
+    }
+  
+    .pagination {
+      justify-content: space-between;
+    }
+  
+    .stat-box {
+      width: 30%;
+    }
+  }
+  
+  @media (min-width: 1081px) {
+    header {
+      padding: 20px 40px;
+    }
+
+    .header-logo span:nth-child(1){
+      font-size:1.15rem;
+      letter-spacing: 3.2px;
+    }
+  
+    .header-logo span:nth-child(2){
+      font-size:1.3rem;
+      letter-spacing: 8px;
+    }
+  
+    .header-logo span:nth-child(1):first-letter{
+      font-size:1.6rem;
+    }
+  
+    .header-logo span:nth-child(2):first-letter{
+      font-size:2.4rem;
+    }
+
+  
+    header select, header input {
+      margin-left: 20px;
+    }
+  
+    .pagination {
+      justify-content: space-between;
+    }
+  
+    .stat-box {
+      width: 25%;
+    }
+  }
+  

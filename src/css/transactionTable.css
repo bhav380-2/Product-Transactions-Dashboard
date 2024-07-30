@@ -1,0 +1,278 @@
+/* General styles for the transactions table */
+.transactions-table {
+  width: 100%;
+  overflow-x: auto; /* Ensure table is scrollable on small screens */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
+  margin-top:45px;
+}
+
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th, .transactions-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.transactions-table th {
+  background-color: #fdd5d570; /* Primary color for header */
+  color: #fff;
+  color:black;
+  font-weight: 500;
+}
+.transactions-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transactions-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.row td img{
+  width:150px;
+  height:120px;
+  border-radius: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.pagination button {
+  width:120px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #5393d7fc; 
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  align-self: center;
+  font-size: 16px;
+}
+
+#curr-page{
+  color:rgba(0, 0, 0, 0.913);
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+  .transactions-table table {
+    font-size: 14px;
+  }
+
+  .row th{
+    font-size:0.78rem;
+  }
+
+  .row td img{
+    height:60px;
+    width:16vw;
+  }
+
+
+  .row td{
+    font-size:0.72rem;
+  }
+
+  .row th:nth-child(3),th:nth-child(7),th:nth-child(1){
+    display: none;
+  }
+
+  .row td:nth-child(3),td:nth-child(7),td:nth-child(1){
+    display: none;
+  }
+
+  .transactions-table th, .transactions-table td {
+    padding: 8px;
+  }
+
+  .pagination {
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+  }
+
+  .pagination button {
+    padding:4px;
+    font-size:0.9rem;
+    /* width: 100%; */
+    width:75px;
+    height:35px;
+    margin-top:5px;
+    margin-bottom: 5px;
+  }
+
+  #curr-page{
+    font-size:0.75rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+  .transactions-table table {
+    font-size: 16px;
+  }
+
+  .transactions-table th, .transactions-table td {
+    padding: 5px;
+  }
+  
+  
+
+  .row th{
+    font-size:0.9rem;
+  }
+
+  .row td img{
+    height:100px;
+    width:16.5vw;
+  }
+
+
+  .row td{
+    font-size:0.84rem;
+  }
+
+  .row th:nth-child(3),th:nth-child(1){
+    display: none;
+  }
+
+  .row td:nth-child(3),td:nth-child(1){
+    display: none;
+  }
+
+  .transactions-table th, .transactions-table td {
+    padding: 10px;
+  }
+
+  .pagination {
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+    /* align-items: flex-start;
+     */
+  }
+
+  .pagination button {
+    padding:4px;
+    font-size:0.9rem;
+    /* width: 100%; */
+    width:105px;
+    height:38px;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+
+  #curr-page{
+    font-size:0.8rem;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 992px) {
+  .transactions-table table {
+    font-size: 16px;
+  }
+
+  .row td img{
+    height:100px;
+    width:15.5vw;
+  }
+
+  .row th{
+    font-size:0.9rem;
+  }
+
+  .row td{
+    font-size:0.85rem;
+  }
+
+
+  .transactions-table th, .transactions-table td {
+    padding: 12px;
+  }
+
+  .pagination {
+    flex-direction: row;
+  }
+
+  .pagination button {
+    font-size:0.95rem;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (min-width: 993px) and (max-width: 1080px) {
+  .transactions-table table {
+    font-size: 18px;
+  }
+
+  .row td img{
+    height:135px;
+    width:17.5vw;
+  }
+
+  .row th{
+    font-size:1rem;
+  }
+
+  .row td{
+    font-size:0.93rem;
+  }
+
+
+
+  .transactions-table th, .transactions-table td {
+    padding: 15px;
+  }
+
+  .pagination {
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1081px) {
+  .transactions-table table {
+    font-size: 18px;
+  }
+  .row td img{
+    height:135px;
+    width:16vw;
+  }
+
+
+  .transactions-table th, .transactions-table td {
+    padding: 15px;
+  }
+
+  .pagination {
+    justify-content: space-evenly;
+  }
+}
