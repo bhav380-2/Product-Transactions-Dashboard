@@ -1,12 +1,13 @@
 /* General styles for the transactions table */
 .transactions-table {
   width: 100%;
-  overflow-x: auto; /* Ensure table is scrollable on small screens */
+  overflow-x: auto;
+  /* Ensure table is scrollable on small screens */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   margin-bottom: 20px;
-  margin-top:45px;
+  margin-top: 45px;
 }
 
 .transactions-table table {
@@ -14,7 +15,8 @@
   border-collapse: collapse;
 }
 
-.transactions-table th, .transactions-table td {
+.transactions-table th,
+.transactions-table td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
@@ -22,11 +24,13 @@
 }
 
 .transactions-table th {
-  background-color: #fdd5d570; /* Primary color for header */
+  background-color: #fdd5d570;
+  /* Primary color for header */
   color: #fff;
-  color:black;
+  color: black;
   font-weight: 500;
 }
+
 .transactions-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -36,9 +40,9 @@
 }
 
 
-.row td img{
-  width:150px;
-  height:120px;
+.row td img {
+  width: 150px;
+  height: 120px;
   border-radius: 4px;
 }
 
@@ -49,15 +53,15 @@
 }
 
 .pagination button {
-  width:120px;
+  width: 120px;
   padding: 10px 15px;
   border: none;
-  background-color: #5393d7fc; 
+  background-color: #5393d7fc;
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  margin-top:10px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -77,62 +81,81 @@
   font-size: 16px;
 }
 
-#curr-page{
-  color:rgba(0, 0, 0, 0.913);
+#curr-page {
+  color: rgba(0, 0, 0, 0.913);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-/* Media Queries */
+#notFound {
+  margin-top: 40px;
+  text-align: center;
 
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: gray
+}
+
+/* ____________________media queries________________________ */
 @media (max-width: 480px) {
   .transactions-table table {
     font-size: 14px;
   }
 
-  .row th{
-    font-size:0.78rem;
+  .row th {
+    font-size: 0.78rem;
   }
 
-  .row td img{
-    height:60px;
-    width:16vw;
+  .row td img {
+    height: 60px;
+    width: 16vw;
   }
 
 
-  .row td{
-    font-size:0.72rem;
+  .row td {
+    font-size: 0.72rem;
   }
 
-  .row th:nth-child(3),th:nth-child(7),th:nth-child(1){
+  .row th:nth-child(3),
+  th:nth-child(7),
+  th:nth-child(1) {
     display: none;
   }
 
-  .row td:nth-child(3),td:nth-child(7),td:nth-child(1){
+  .row td:nth-child(3),
+  td:nth-child(7),
+  td:nth-child(1) {
     display: none;
   }
 
-  .transactions-table th, .transactions-table td {
+  .transactions-table th,
+  .transactions-table td {
     padding: 8px;
   }
 
   .pagination {
     justify-content: space-evenly;
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
   }
 
   .pagination button {
-    padding:4px;
-    font-size:0.9rem;
+    padding: 4px;
+    font-size: 0.9rem;
     /* width: 100%; */
-    width:75px;
-    height:35px;
-    margin-top:5px;
+    width: 75px;
+    height: 35px;
+    margin-top: 5px;
     margin-bottom: 5px;
   }
 
-  #curr-page{
-    font-size:0.75rem;
+  #curr-page {
+    font-size: 0.75rem;
   }
+
+  #notFound {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
 }
 
 @media (min-width: 481px) and (max-width: 720px) {
@@ -140,35 +163,38 @@
     font-size: 16px;
   }
 
-  .transactions-table th, .transactions-table td {
+  .transactions-table th,
+  .transactions-table td {
     padding: 5px;
   }
-  
-  
 
-  .row th{
-    font-size:0.9rem;
+
+  .row th {
+    font-size: 0.9rem;
   }
 
-  .row td img{
-    height:100px;
-    width:16.5vw;
+  .row td img {
+    height: 100px;
+    width: 16.5vw;
   }
 
 
-  .row td{
-    font-size:0.84rem;
+  .row td {
+    font-size: 0.84rem;
   }
 
-  .row th:nth-child(3),th:nth-child(1){
+  .row th:nth-child(3),
+  th:nth-child(1) {
     display: none;
   }
 
-  .row td:nth-child(3),td:nth-child(1){
+  .row td:nth-child(3),
+  td:nth-child(1) {
     display: none;
   }
 
-  .transactions-table th, .transactions-table td {
+  .transactions-table th,
+  .transactions-table td {
     padding: 10px;
   }
 
@@ -180,17 +206,17 @@
   }
 
   .pagination button {
-    padding:4px;
-    font-size:0.9rem;
+    padding: 4px;
+    font-size: 0.9rem;
     /* width: 100%; */
-    width:105px;
-    height:38px;
-    margin-top:10px;
+    width: 105px;
+    height: 38px;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
-  #curr-page{
-    font-size:0.8rem;
+  #curr-page {
+    font-size: 0.8rem;
   }
 }
 
@@ -199,21 +225,22 @@
     font-size: 16px;
   }
 
-  .row td img{
-    height:100px;
-    width:15.5vw;
+  .row td img {
+    height: 100px;
+    width: 15.5vw;
   }
 
-  .row th{
-    font-size:0.9rem;
+  .row th {
+    font-size: 0.9rem;
   }
 
-  .row td{
-    font-size:0.85rem;
+  .row td {
+    font-size: 0.85rem;
   }
 
 
-  .transactions-table th, .transactions-table td {
+  .transactions-table th,
+  .transactions-table td {
     padding: 12px;
   }
 
@@ -222,8 +249,8 @@
   }
 
   .pagination button {
-    font-size:0.95rem;
-    margin-top:10px;
+    font-size: 0.95rem;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
@@ -234,22 +261,23 @@
     font-size: 18px;
   }
 
-  .row td img{
-    height:135px;
-    width:17.5vw;
+  .row td img {
+    height: 135px;
+    width: 17.5vw;
   }
 
-  .row th{
-    font-size:1rem;
+  .row th {
+    font-size: 1rem;
   }
 
-  .row td{
-    font-size:0.93rem;
+  .row td {
+    font-size: 0.93rem;
   }
 
 
 
-  .transactions-table th, .transactions-table td {
+  .transactions-table th,
+  .transactions-table td {
     padding: 15px;
   }
 
@@ -262,13 +290,15 @@
   .transactions-table table {
     font-size: 18px;
   }
-  .row td img{
-    height:135px;
-    width:16vw;
+
+  .row td img {
+    height: 135px;
+    width: 16vw;
   }
 
 
-  .transactions-table th, .transactions-table td {
+  .transactions-table th,
+  .transactions-table td {
     padding: 15px;
   }
 

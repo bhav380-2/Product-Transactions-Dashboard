@@ -16,7 +16,7 @@ const Statistics = (props) => {
       </div>
       <div className="statistics-row">
         <div className="stat-box">
-          <div className="value">${statistics.totalSales}</div>
+          <div className="value">${statistics.totalSales.toFixed(2)}</div>
           <div className="label">Total Amount</div>
         </div>
         <div className="stat-box">

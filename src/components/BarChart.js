@@ -3,11 +3,9 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import '../css/barChart.css';
-
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const BarChart = ({ data }) => {
-
   const { priceRanges } = data;
 
   let chartData;
@@ -25,7 +23,6 @@ const BarChart = ({ data }) => {
         },
       ],
     };
-
 
     chartOptions = {
       responsive: true,
@@ -69,7 +66,6 @@ const BarChart = ({ data }) => {
 
   }
 
-
   return (
     <>
       {chartData ?
@@ -86,5 +82,4 @@ const BarChart = ({ data }) => {
     </>
   );
 };
-
 export default BarChart;

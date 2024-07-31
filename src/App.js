@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -17,6 +16,9 @@ const App = () => {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
 
+  console.log("***************************************************************")
+  console.log(transactions);
+
   useEffect(() => {
     dispatch(fetchTransactions({ month, search, page }));
     dispatch(fetchStatistics(month));
@@ -34,6 +36,8 @@ const App = () => {
     setPage(1);
   }
 
+  
+
   return (
     <div className="app">
       <Header month = {month} search={search} handleMonth={handleMonth} handleSearch={handleSearch}/>
@@ -44,7 +48,7 @@ const App = () => {
           <p>Error: {error}</p>
         ) : ( 
           <>
-            <TransactionsTable transactions={transactions} page={page} setPage={setPage} />
+            <TransactionsTable transactions={transactions.data} totalPages={transactions.totalPages} currPage={page} setPage={setPage} />
             <Statistics statistics={statistics} month={month} />
             <BarChart data={barChartData} />
           </>

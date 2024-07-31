@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 170px;
-  
+
 }
 
 .statistics-header {
@@ -21,7 +21,7 @@
 }
 
 .stat-box {
-  background-color: #f8f4e6; 
+  background-color: #f8f4e6;
   border-radius: 8px;
   width: 250px;
   height: 200px;
@@ -63,7 +63,7 @@
 .stat-box .value {
   font-size: 32px;
   font-weight: bold;
-  color: #007bff; 
+  color: #007bff;
 }
 
 .stat-box .label {
@@ -71,8 +71,7 @@
   color: #333;
 }
 
-/* Media Queries */
-
+/* ____________________media queries________________________ */
 @media (max-width: 480px) {
 
   .statistics-container {
@@ -80,7 +79,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 75px;
-    
+
   }
 
   .statistics-header {
@@ -89,7 +88,7 @@
     color: #333;
     margin-bottom: 65px;
   }
-  
+
   .statistics-row {
     flex-direction: column;
     align-items: center;

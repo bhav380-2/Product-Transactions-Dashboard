@@ -1,24 +1,22 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const INITIAL_STATE={
+const INITIAL_STATE = {
   transactions: [],
   statistics: {},
   barChartData: [],
-  loading: false,
+  loading: true,
   error: null,
 }
 
 export const fetchTransactions = createAsyncThunk(
   'transactions/fetchTransactions',
   async ({ month, search, page }) => {
-    console.log("Hiieiei");
     const response = await axios.get(`http://localhost:8000/transactions`, {
       params: { month, search, page }
     });
-
-    console.log(response.data.content.data)
-    return response.data.content.data;
+    // console.log("transaction thunk compleete")
+    return response.data.content;
   }
 );
 
@@ -34,9 +32,9 @@ export const fetchBarChartData = createAsyncThunk(
   'transactions/fetchBarChartData',
   async (month) => {
 
-    console.log("bar asyncthunk");
+    // console.log("bar asyncthunk");
     const response = await axios.get(`http://localhost:8000/transactions/barchart`, { params: { month } });
-        console.log(response.data)
+    // console.log(response.data)
     return response.data.content.data;
   }
 );
@@ -47,38 +45,49 @@ const transactionsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      .addCase(fetchTransactions.fulfilled, (state, action) => {
+
+        state.transactions = action.payload;
+        state.error = null;
+      })
       .addCase(fetchTransactions.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchTransactions.fulfilled, (state, action) => {
-        state.loading = false;
-        state.transactions = action.payload;
-      })
+
       .addCase(fetchTransactions.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })
+
+      .addCase(fetchStatistics.fulfilled, (state, action) => {
+
+        state.statistics = action.payload;
+        state.error = null;
+      })
+
       .addCase(fetchStatistics.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchStatistics.fulfilled, (state, action) => {
-        state.loading = false;
-        state.statistics = action.payload;
-      })
+
       .addCase(fetchStatistics.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })
+
+      .addCase(fetchBarChartData.fulfilled, (state, action) => {
+
+        state.barChartData = action.payload;
+        state.loading = false;
+        state.error = null;
+      })
+
       .addCase(fetchBarChartData.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchBarChartData.fulfilled, (state, action) => {
-        state.loading = false;
-        state.barChartData = action.payload;
-      })
+
       .addCase(fetchBarChartData.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
