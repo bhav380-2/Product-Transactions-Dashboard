@@ -9,10 +9,13 @@ const INITIAL_STATE = {
   error: null,
 }
 
+const baseURL = 'http://localhost:8000/api'
+
 export const fetchTransactions = createAsyncThunk(
   'transactions/fetchTransactions',
   async ({ month, search, page }) => {
-    const response = await axios.get(`http://localhost:8000/transactions`, {
+    const API = baseURL+'/transactions';
+    const response = await axios.get(API, {
       params: { month, search, page }
     });
     // console.log("transaction thunk compleete")
@@ -23,7 +26,8 @@ export const fetchTransactions = createAsyncThunk(
 export const fetchStatistics = createAsyncThunk(
   'transactions/fetchStatistics',
   async (month) => {
-    const response = await axios.get(`http://localhost:8000/transactions/stats`, { params: { month } });
+    const API = baseURL+'/transactions/stats';
+    const response = await axios.get(API, { params: { month } });
     return response.data.content.data;
   }
 );
@@ -31,9 +35,9 @@ export const fetchStatistics = createAsyncThunk(
 export const fetchBarChartData = createAsyncThunk(
   'transactions/fetchBarChartData',
   async (month) => {
-
+    const API = baseURL+'/transactions/barchart';
     // console.log("bar asyncthunk");
-    const response = await axios.get(`http://localhost:8000/transactions/barchart`, { params: { month } });
+    const response = await axios.get(API, { params: { month } });
     // console.log(response.data)
     return response.data.content.data;
   }

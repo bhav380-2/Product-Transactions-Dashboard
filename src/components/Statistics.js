@@ -25,7 +25,7 @@ const Statistics = (props) => {
         </div>
         <div className="stat-box">
           <div className="value">{statistics.unsoldItems}</div>
-          <div className="label">Not Sold Items</div>
+          <div className="label">Unsold Items</div>
         </div>
       </div>
     </div>
